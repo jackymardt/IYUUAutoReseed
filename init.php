@@ -52,8 +52,6 @@ if (file_exists(ROOT_PATH."/config/config.php")) {
 } else {
     // 第一次会生成
     @copy(ROOT_PATH . '/config/config.sample.php', ROOT_PATH . '/config/config.php');
-    // 示例配置
-    $configALL = require_once ROOT_PATH . '/config/config.sample.php';
     echo microtime(true).' 缺少config.php，已载入config.sample.php示例配置。'.PHP_EOL;
     echo microtime(true).' 请编辑配置文件config.php，以免后续版本升级覆盖配置！！！'.PHP_EOL;
     $t = 30;
